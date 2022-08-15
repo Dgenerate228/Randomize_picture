@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Рандомайзер пикч</string>
+    <string name="random_number">Ты гей </string>
+    <string name="enter_image_keyword">Выберите тег изображения</string>
+</resources>

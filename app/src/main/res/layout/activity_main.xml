@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/testImageView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/pink"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/getRandomImageButton"
+        />
+<Button
+    android:id="@+id/getRandomImageButton"
+    android:layout_width="@+id/testImageView"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="5dp"
+    android:text="Случайное изображение"
+    app:layout_constraintStart_toStartOf="@id/testImageView"
+    app:layout_constraintEnd_toEndOf="@id/testImageView"
+    app:layout_constraintTop_toBottomOf="@+id/testImageView"
+    />
+
+    <Button
+        android:id="@+id/getRandomImageButton2"
+        android:layout_width="@+id/testImageView"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Изображение по тегу"
+        app:layout_constraintStart_toStartOf="@id/testImageView"
+        app:layout_constraintEnd_toEndOf="@id/testImageView"
+        app:layout_constraintTop_toBottomOf="@+id/useKeywordChekBox"
+        app:layout_constraintBottom_toTopOf="@id/keywordEditText"
+        />
+
+    <CheckBox
+        android:id="@+id/useKeywordChekBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Поиск по тегу"
+        android:layout_marginTop="0dp"
+        android:checked="false"
+        app:layout_constraintStart_toStartOf="@id/testImageView"
+        app:layout_constraintEnd_toEndOf="@id/testImageView"
+        app:layout_constraintTop_toBottomOf="@id/getRandomImageButton"
+        app:layout_constraintBottom_toTopOf="@id/getRandomImageButton2"
+        />
+
+    <EditText
+        android:id="@+id/keywordEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="@string/enter_image_keyword"
+        android:imeOptions="actionSearch"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@id/testImageView"
+        app:layout_constraintStart_toStartOf="@id/testImageView"
+        app:layout_constraintTop_toBottomOf="@id/getRandomImageButton2" />
+
+    <TextView
+        android:id="@+id/previewText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/keywordEditText"
+        app:layout_constraintBottom_toTopOf="@id/keywordRadioGroup"
+        android:text="Либо выберите предложенную категорию" />
+
+    <RadioGroup
+        android:id="@+id/keywordRadioGroup"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:checkedButton="@id/girlRadioButton"
+        app:layout_constraintStart_toStartOf="@id/testImageView"
+        app:layout_constraintEnd_toEndOf="@id/testImageView"
+        app:layout_constraintTop_toBottomOf="@id/previewText"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/buttonRadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбор категории" />
+
+        <RadioButton
+            android:id="@+id/girlRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Girls"
+            />
+        <RadioButton
+            android:id="@+id/carRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Car"
+            />
+        <RadioButton
+            android:id="@+id/natureRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nature"
+            />
+        <RadioButton
+            android:id="@+id/animalsRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animals"
+            />
+    </RadioGroup>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@id/testImageView"
+        app:layout_constraintStart_toStartOf="@id/testImageView"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="59dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
