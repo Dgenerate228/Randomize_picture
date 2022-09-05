@@ -1,4 +1,4 @@
-package com.example.lesson_kotlin_part_3
+package com.example.Randomizer_picture
 
 import org.junit.Test
 

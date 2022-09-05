@@ -1,10 +1,8 @@
-package com.example.lesson_kotlin_part_3
+package com.example.Randomizer_picture
 
-import android.annotation.SuppressLint
 import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
 import android.widget.RadioButton
@@ -15,11 +13,10 @@ import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.bumptech.glide.load.engine.GlideException
 import com.bumptech.glide.request.RequestListener
 import com.bumptech.glide.request.target.Target
+import com.example.lesson_kotlin_part_3.R
 import com.example.lesson_kotlin_part_3.databinding.ActivityMainBinding
-import java.net.URL
 import java.net.URLEncoder
 import java.nio.charset.StandardCharsets
-import kotlin.random.Random
 
 class MainActivity : AppCompatActivity() {
 
@@ -90,7 +87,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showToastWithRandomNumber(): Boolean {
-        val number = Random.nextInt(100)
         val message = getString(R.string.random_number)
         Toast.makeText(this,message, Toast.LENGTH_SHORT).show()
         return true
